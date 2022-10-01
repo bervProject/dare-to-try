@@ -21,11 +21,11 @@ apply plugin: 'com.google.gms.google-services'
 def multidex_version = "2.0.1"
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     defaultConfig {
         applicationId "id.my.berviantoleo.daretotry"
         minSdkVersion 19
-        targetSdkVersion 32
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
