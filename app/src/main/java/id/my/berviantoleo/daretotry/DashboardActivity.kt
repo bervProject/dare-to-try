@@ -20,14 +20,17 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
-import kotlinx.android.synthetic.main.activity_dashboard.*
+import id.my.berviantoleo.daretotry.databinding.ActivityDashboardBinding
 
 class DashboardActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityDashboardBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
-        logoutButton.setOnClickListener {
+        binding = ActivityDashboardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.logoutButton.setOnClickListener {
             AuthUI.getInstance().signOut(this).addOnCompleteListener {
                 runMain()
             }
