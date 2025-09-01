@@ -20,11 +20,11 @@ apply plugin: 'com.google.gms.google-services'
 def multidex_version = "2.0.1"
 
 android {
-    compileSdk 35
+    compileSdk 36
     defaultConfig {
         applicationId "id.my.berviantoleo.daretotry"
         minSdkVersion 23
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -55,7 +55,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'androidx.core:core-ktx:1.17.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation "androidx.multidex:multidex:$multidex_version"
     implementation 'com.firebaseui:firebase-ui-auth:9.0.0'
